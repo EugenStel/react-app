@@ -47,11 +47,11 @@ export const UserPage = (props) => {
 
     return (
         <>
-        {!isLoading 
-        ? <HandledUser {...userData} errorMsg={errorMessage}/>
-        : <img src={preloadersrc}/> }
-        
-        <Link to="/">Go to main page</Link>
+            {!isLoading 
+            ? <HandledUser {...userData} errorMsg={errorMessage}/>
+            : <img src={preloadersrc}/> }
+            
+            <Link to="/">Go to main page</Link><br />
         </>
     )
 }

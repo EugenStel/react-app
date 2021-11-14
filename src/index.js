@@ -7,6 +7,8 @@ import './index.css'
 import {Counter} from './playground/hooks/counter'
 import {YearsAndEggs} from './playground/hooks/YearsAndEggs'
 
+import {TestWoggler} from '../src/playground/hooks/useEffect'
+
 
 
 // ReactDOM.render(
@@ -14,16 +16,26 @@ import {YearsAndEggs} from './playground/hooks/YearsAndEggs'
 //   , document.getElementById('root'))
 
 
-ReactDOM.render(
+// ReactDOM.render(
 
-  <Router>
-    <Routes>
-      <Route path="/" element={<MainPage/>}/>
-      <Route path="/search" element={<SearchUserPage/>}/>
-      <Route path="/user/:userId" element={<UserPage/>}/>
-      <Route path="*" element={<NotFoundPage/>}/>
-    </Routes>
-  </Router>
+//   <Router>
+//     <Routes>
+//       <Route path="/" element={<MainPage/>}/>
+//       <Route path="/search" element={<SearchUserPage/>}/>
+//       <Route path="/user/:userId" element={<UserPage/>}/>
+//       <Route path="*" element={<NotFoundPage/>}/>
+//     </Routes>
+// какой компонент будет отбраж всегда, если указан за пределами роутс
+//   </Router>
+//   ,
+//   document.getElementById('root')
+// );
+
+
+
+// useEffect()
+ReactDOM.render(
+  <TestWoggler />
   ,
   document.getElementById('root')
 );
