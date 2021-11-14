@@ -11,10 +11,10 @@ export class UserList extends Component {
         const {users} = this.props;
         return (
             users ?
-            <ul className={cls.UserList}>
+            <div className={cls.UserList}>
                 {users.map(({id, ...otherProps}) => (<User key={id} {...otherProps}/>))}
                 
-            </ul>
+            </div>
             :  <img src={loaderSrc} alt='user_avatar'/>
         )
     }

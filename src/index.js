@@ -9,21 +9,21 @@ import {YearsAndEggs} from './playground/hooks/YearsAndEggs'
 
 
 
-ReactDOM.render(
-  <YearsAndEggs/>
-  , document.getElementById('root'))
-
-
 // ReactDOM.render(
+//   <YearsAndEggs/>
+//   , document.getElementById('root'))
 
-//   <Router>
-//     <Routes>
-//       <Route path="/" element={<MainPage/>}/>
-//       <Route path="/search" element={<SearchUserPage/>}/>
-//       <Route path="/user/:userId" element={<UserPage/>}/>
-//       <Route path="*" element={<NotFoundPage/>}/>
-//     </Routes>
-//   </Router>
-//   ,
-//   document.getElementById('root')
-// );
+
+ReactDOM.render(
+
+  <Router>
+    <Routes>
+      <Route path="/" element={<MainPage/>}/>
+      <Route path="/search" element={<SearchUserPage/>}/>
+      <Route path="/user/:userId" element={<UserPage/>}/>
+      <Route path="*" element={<NotFoundPage/>}/>
+    </Routes>
+  </Router>
+  ,
+  document.getElementById('root')
+);
