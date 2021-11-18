@@ -8,21 +8,16 @@ export const Test = () => {
 
   const renderRef = useRef(false)
 
-
-
-
 // 2 аргумент - массив зависимостей: , []
 // 2 функция для очистки, отписки
   // useEffect(() => {
   //   // document.title = count;
-
     
   //   console.log('RERENDER')
   //   return () => {
-  //     console.log('UNMOUNT')
+  //     console.log('COMPONENT UNMOUNT')
   //   }
   // }, [])
-
 
 
 // with refs... не срабатывает на mount, но работает на апдэейт
@@ -35,7 +30,6 @@ export const Test = () => {
       console.log('Use effect!')
     }
   })
-
 
   console.log('RENDER!')
   
@@ -51,7 +45,7 @@ export const Test = () => {
 
 
 
-export const TestWoggler = () => {
+export const TestToggler = () => {
 
   const [shoudShow, setShoudShow] = useState(true);
 

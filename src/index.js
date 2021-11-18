@@ -7,7 +7,10 @@ import './index.css'
 import {Counter} from './playground/hooks/counter'
 import {YearsAndEggs} from './playground/hooks/YearsAndEggs'
 
-import {TestWoggler} from '../src/playground/hooks/useEffect'
+import {Example} from './playground/hooks/useCallback'
+
+
+// import {TestToggler} from '../src/playground/hooks/useEffect'
 
 
 
@@ -35,7 +38,7 @@ import {TestWoggler} from '../src/playground/hooks/useEffect'
 
 // useEffect()
 ReactDOM.render(
-  <TestWoggler />
+  <Example />
   ,
   document.getElementById('root')
 );
