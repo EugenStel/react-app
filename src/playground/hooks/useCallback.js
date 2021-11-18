@@ -1,25 +1,9 @@
-import { useState, useCallback, memo } from "react"
-
-
-const items = [
-    {
-        id: 1,
-        name: 'First'
-    },
-    {
-        id: 2,
-        name: 'Second'
-    },
-    {
-        id: 3,
-        name: 'Third'
-    }
-]
-
+import { useState, useCallback, memo, useMemo } from "react"
 
 
 const Item = memo(({itemData: {id, name}, clickHandler}) => {
     console.log(`${id} item RENDERS`)
+    const [counter, setCounter] = useState(0)
     return (
         <>
             <div 
@@ -39,6 +23,23 @@ export const Example = () => {
 
 
 
+    const items = useMemo(() => {
+        return [
+            {
+                id: 1,
+                name: 'First'
+            },
+            {
+                id: 2,
+                name: 'Second'
+            },
+            {
+                id: 3,
+                name: 'Third'
+            }
+        ];
+    }, []);
+
     // const handleClick = () => {
     //     setSomeState({})
     //     console.log('button was clicked!')
@@ -51,7 +52,6 @@ export const Example = () => {
     const handleMessage = () => {
         setMessage(Math.random().toFixed(2));
     }
-
 
 
     console.log('render')
@@ -84,3 +84,5 @@ export const Example = () => {
 // useCallback, useMemo - для оптимизации
 // применять когда монго детей у родителя, и есть ссылка на функцию в пропсах
 // memo = should compomemt update.. сравнивание пропсов, это hoc
+// useCallback - для функций
+// useMemo - для чего угодно
